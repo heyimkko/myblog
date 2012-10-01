@@ -1,4 +1,5 @@
-<h1>Listing blogs</h1>
+<div class="structure">
+<h1>A series of thoughts</h1>
 
 <table>
   <tr>
@@ -12,9 +13,9 @@
 
 <% @blogs.each do |blog| %>
   <tr>
-    <td><%= blog.title %></td>
-    <td><%= blog.body %></td>
-    <td><%= blog.time %></td>
+    <td id="b1"><%= blog.title %></td>
+    <td id="b2"><%= blog.body %></td>
+    <td id="b3"><%= blog.time %></td>
     <td><%= link_to 'Show', blog %></td>
     <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
     <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,5 +24,7 @@
 </table>
 
 <br />
-
-<%= link_to 'New Blog', new_blog_path %>
+<center>
+<%= link_to 'Post a Thought', new_blog_path, class: "btn btn-large btn-block" %>
+</center>
+</div>
