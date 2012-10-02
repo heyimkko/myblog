@@ -1,11 +1,13 @@
 <div class="structure">
-<h1>A series of thoughts</h1>
+<h1>A series of <%= @blogs.count %> thoughts</h1>
+
+<%= will_paginate %>
 
 <table>
   <tr>
     <th>Title</th>
     <th>Body</th>
-    <th>Time</th>
+    <th>Posted</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,18 +15,19 @@
 
 <% @blogs.each do |blog| %>
   <tr>
-    <td id="b1"><%= blog.title %></td>
+    <td id="b1"><%= link_to blog.title, blog %></td>
     <td id="b2"><%= blog.body %></td>
-    <td id="b3"><%= blog.time %></td>
-    <td><%= link_to 'Show', blog %></td>
-    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-    <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td id="b3"><%= time_ago_in_words(blog.created_at) %> ago</td>
+    <td><%= link_to '[^]', edit_blog_path(blog) %></td>
+    <td><%= link_to '[X]', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
+<%= will_paginate %>
+
 <br />
-<center>
-<%= link_to 'Post a Thought', new_blog_path, class: "btn btn-large btn-block" %>
-</center>
+<div class="button">
+  <%= link_to 'Post a Thought', new_blog_path, class: "btn btn-large btn-block" %>
+</div>
 </div>
