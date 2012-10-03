@@ -1,0 +1,196 @@
+@import 'bootstrap';
+
+@mixin box_sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+  background-image:url('bg3.png');
+  color: #333;
+  font-family: 'Open Sans', Tahoma;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+
+h1 {
+	font-family: 'Trocchi', Georgia;
+	padding: 10px;
+	padding-bottom: 20px;
+}
+
+p, ol, ul, td {
+  font-family: 'Open Sans', Tahoma;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+th {
+	text-align: left;
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+#b1 {
+	width: 20%;
+}
+
+#b2 {
+	width: 65%;
+}
+
+#b3 {
+	width: 15%;
+}
+
+a {
+  text-decoration: none;
+  color: #1e6bbd;
+  &:visited {
+    color: #1e6bbd;
+  }
+  &:hover {
+    color: #1e6bbd;
+  }
+}
+
+blockquote {
+  font-family: 'Trocchi', Georgia;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 24px;
+  border: none;
+  margin: 1em 20px;
+  padding-left: 55px;
+  padding-bottom: 20px;
+  background: transparent url(quote.jpg) no-repeat; 
+}
+
+.structure {
+  float: center;
+  margin: auto;
+  width: 1080px;
+  background-color: #fff;
+  border: 2px solid black;
+  padding-bottom: 10px;
+  &.field, &.actions {
+    margin-bottom: 10px;
+
+  }
+}
+
+.field {
+	padding-left: 10px;
+	font-family: 'Open Sans', Tahoma;
+  ont-size: 14px;
+}
+
+.actions {
+	color: #1e6bbd;
+	padding-left: 10px;
+}
+
+.button, .flash {
+	text-align: center;
+}
+
+input, textarea, select {
+	font-family: 'Open Sans', Tahoma;
+  t-size: 14px;
+	border: 1px solid #bbb;
+	width: 1060px;
+	padding: 10px;
+	height: auto;
+	margin-bottom: 15px;
+	@include box_sizing;
+}
+
+label {
+	font-family: 'Open Sans', Tahoma;
+  ont-size: 16px;
+}
+
+/* Header*/
+
+.navbar-static-top, .container {
+  font-family: 'Open Sans', Tahoma;
+  font-size: 14px;
+  color: white;
+  width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  li {
+    color: #fff;
+  }
+  a {
+    color: #fff;
+    font-style: bold;
+    text-decoration: none;
+    }
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration:none;
+  }
+}
+
+.title {
+  font-family: 'Open Sans', Georgia;
+  font-weight: 700;
+  font-size: 120px;
+  text-align: center;
+  color: black;
+  letter-spacing: -8px;
+  text-shadow: 1px 1px white;
+  padding-top: 50px;
+  line-height: 100px;
+}
+
+
+#notice {
+  color: green;
+}
+
+/* Random Gibberish */
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
