@@ -2,11 +2,14 @@
 <html>
 <head>
   <title>Hey! I'm kko and this is my blog!</title>
+  <link href='http://fonts.googleapis.com/css?family=Trocchi|Open+Sans:400,700' rel='stylesheet'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
 </head>
 <body>
+	<%= render 'layouts/header' %>
 
 <%= yield %>
 

@@ -1,5 +1,6 @@
+<body>
 <div class="structure">
-<h1>A series of <%= @blogs.count %> thoughts</h1>
+<h1>A Collection of <%= @blogs.count %> Thoughts</h1>
 
 <%= will_paginate %>
 
@@ -31,3 +32,4 @@
   <%= link_to 'Post a Thought', new_blog_path, class: "btn btn-large btn-block" %>
 </div>
 </div>
+</body>
