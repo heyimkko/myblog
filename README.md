@@ -6,4 +6,4 @@ Having completed [Hartl's RoR Tutorial](http://ruby.railstutorial.org) and a few
 
 This blog will serve as the test zone for my CSS and Rails experimentation as a 3-month-old Rails student.
 
-Heroku: (http://protected-anchorage-6159.herokuapp.com/)
+Check it out on Heroku: http://protected-anchorage-6159.herokuapp.com/
