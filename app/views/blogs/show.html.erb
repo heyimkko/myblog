@@ -7,7 +7,7 @@
 
 	<div class="post">
 		<blockquote>
-		<%=raw @blog.body %>
+		<%= sanitize(h(@blog.body)).gsub(/\n/, '<br/>').html_safe %>
 		</blockquote>
 	</div>
 
